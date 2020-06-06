@@ -1,0 +1,16 @@
+  <ehcache>
+  <diskStore path="java.io.tmpdir"/>
+  <cache name ="productCache"
+     maxEntriesLocalHeap="10000"
+     eternal="false"
+     timeToIdleSeconds="120"
+     timeToLiveSeconds="120"
+     maxEntriesLocalDisk="10000000"
+     diskExpiryThreadIntervalSeconds="120"
+     memoryStoreEvictionPolicy="LRU"
+     transactionMode="off">
+     <persistence strategy="localTempSwap"/>
+  </cache>
+  <cache name="productCache" maxElementsInMemory="50" eternal="false"
+    overflowToDisk="false" memoryStoreEvictionPolicy="LFU" />    
+</ehcache>
